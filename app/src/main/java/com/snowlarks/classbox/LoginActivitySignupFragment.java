@@ -11,6 +11,12 @@ import android.view.ViewGroup;
  */
 public class LoginActivitySignupFragment extends Fragment {
 
+
+    public static  LoginActivitySignupFragment getInstance(){
+        LoginActivitySignupFragment instance = new LoginActivitySignupFragment();
+        return instance;
+    }
+
     public LoginActivitySignupFragment() {
     }
 

@@ -1,42 +1,31 @@
-<LinearLayout
-    android:layout_height="match_parent"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical"
-    android:weightSum="1">
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
 
 
-    <FrameLayout
+    <include
+        android:id="@+id/app_bar"
+        layout="@layout/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
-        android:layout_weight="0"
-        android:background="@color/colorPrimary">
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="@string/app_name_caps"
-            android:gravity="center_vertical"
-            android:textColor="@color/white"
-            android:textSize="30dp"
-            android:padding="20dp"/>
+        android:layout_height="128dp"/>
 
-    </FrameLayout>
-
-    <FrameLayout
+    <com.snowlarks.classbox.Tabs.SlidingTabLayout
+        android:id="@+id/loginTab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        app:theme="@style/Theme.AppCompat"
+        android:elevation="10dp"/>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_weight="1">
 
-        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
-            xmlns:tools="http://schemas.android.com/tools"
-            android:id="@+id/signup_fragment"
-            android:name="com.snowlarks.classbox.LoginActivitySignupFragment"
-            tools:layout="@layout/fragment_login_signup"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_vertical" />
-    </FrameLayout>
+    </android.support.v4.view.ViewPager>
 
 </LinearLayout>
-
 

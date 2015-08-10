@@ -6,4 +6,8 @@
 
     <string name="srm_email">Email (srmuniv.edu.in)</string>
 
+    <string-array name="tabs">
+        <item>Sign Up</item>
+        <item>Sign In</item>
+    </string-array>
 </resources>
