@@ -49,7 +49,7 @@ public class LoginActivitySignupFragment extends Fragment {
         signup_button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                AsyncLoginTask Login = new AsyncLoginTask();
+                AsyncLoginTask Login = new AsyncLoginTask((LoginActivity) getActivity());
 
                 if(Extra.comparePassword(password,confirm_password)){
                     Login.execute("register",
