@@ -2,6 +2,15 @@ package com.snowlarks.classbox.Helper;
 
 import android.widget.EditText;
 
+import org.apache.http.NameValuePair;
+import org.apache.http.message.BasicNameValuePair;
+import org.json.JSONException;
+import org.json.JSONObject;
+
+import java.util.ArrayList;
+import java.util.Iterator;
+import java.util.List;
+
 /**
  * Created by Saswat on 12-08-2015.
  */
@@ -13,8 +22,31 @@ public class Extra {
         password = password.trim();
         confirm_password = confirm_password.trim();
 
-        boolean send = (password.equals(confirm_password)) && !password.isEmpty();
+        return (password.equals(confirm_password)) && !password.isEmpty();
 
-        return send;
     }
+
+    public static List<NameValuePair> parseJSON(JSONObject json) throws JSONException {
+
+        List<NameValuePair> pairs = new ArrayList<NameValuePair>();
+
+        Iterator<String> keys = json.keys();
+        while(keys.hasNext()){
+            String key = keys.next();
+            String val = null;
+            try{
+                JSONObject value = json.getJSONObject(key);
+                pairs.addAll(parseJSON(value));
+            }catch(Exception e){
+                val = json.getString(key);
+            }
+
+            if(val != null){
+                pairs.add(new BasicNameValuePair(key,val));
+            }
+        }
+        return pairs;
+    }
+
+
 }

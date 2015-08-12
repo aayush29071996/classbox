@@ -16,6 +16,7 @@ public class LoginActivity extends AppCompatActivity {
     private ViewPager mPager;
     private SlidingTabLayout mTabs;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +40,14 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    public void shiftFragmentToSignUp(){
+        mPager.setCurrentItem( (mPager.getCurrentItem()+1)%2,true);
+    }
+
+    public void performSignIn(){
+
+    }
+
     class PagerAdapter extends FragmentPagerAdapter{
 
         String[] tabs;
@@ -50,8 +59,8 @@ public class LoginActivity extends AppCompatActivity {
         @Override
         public Fragment getItem(int position) {
             switch(position){
-                case 0: return LoginActivitySignupFragment.getInstance();
-                case 1: return LoginActivitySigninFragment.getInstance();
+                case 1: return LoginActivitySignupFragment.getInstance();
+                case 0: return LoginActivitySigninFragment.getInstance();
             }
             return null;
         }
