@@ -3,6 +3,7 @@
     <string name="app_name_caps">ClassBOX</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="welcome">Successfully Logged In!</string>
 
     <string name="srm_email">Email (srmuniv.edu.in)</string>
 
@@ -10,4 +11,5 @@
         <item>Sign Up</item>
         <item>Sign In</item>
     </string-array>
+    <string name="title_activity_main">Saswat@ClassBox</string>
 </resources>
