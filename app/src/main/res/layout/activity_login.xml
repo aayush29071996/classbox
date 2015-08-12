@@ -9,15 +9,12 @@
         android:id="@+id/app_bar"
         layout="@layout/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="128dp"/>
+        android:layout_height="128dp" />
 
     <com.snowlarks.classbox.Tabs.SlidingTabLayout
         android:id="@+id/loginTab"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/colorPrimary"
-        app:theme="@style/Theme.AppCompat"
-        android:elevation="10dp"/>
+        android:layout_height="wrap_content" />
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
