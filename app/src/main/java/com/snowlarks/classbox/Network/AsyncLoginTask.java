@@ -1,4 +1,4 @@
-package com.snowlarks.classbox.Helper;
+package com.snowlarks.classbox.Network;
 
 import android.content.Intent;
 import android.net.Uri;
@@ -30,9 +30,6 @@ import java.util.ArrayList;
 import java.util.List;
 
 
-/**
- * Created by Saswat on 12-08-2015.
- */
 public class AsyncLoginTask extends AsyncTask<String,Void,List<NameValuePair>> {
 
     private final String LOG_TAG = AsyncLoginTask.class.getSimpleName();
@@ -61,7 +58,7 @@ public class AsyncLoginTask extends AsyncTask<String,Void,List<NameValuePair>> {
             urlConnection.setDoInput(true);
             urlConnection.setDoOutput(true);
 
-            List<NameValuePair> send_params = new ArrayList<NameValuePair>();
+            List<NameValuePair> send_params = new ArrayList<>();
             send_params.add(new BasicNameValuePair("email",params[1]));
             send_params.add(new BasicNameValuePair("password",params[2]));
 
@@ -77,7 +74,7 @@ public class AsyncLoginTask extends AsyncTask<String,Void,List<NameValuePair>> {
             urlConnection.connect();
 
             InputStream in = urlConnection.getInputStream();
-            StringBuffer buffer = new StringBuffer();
+            StringBuilder buffer = new StringBuilder();
             if(in == null){
                 reponse_str = null;
             }

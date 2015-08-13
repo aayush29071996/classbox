@@ -1,4 +1,4 @@
-package com.snowlarks.classbox.Helper;
+package com.snowlarks.classbox.Network;
 
 import android.widget.EditText;
 
@@ -11,9 +11,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
 
-/**
- * Created by Saswat on 12-08-2015.
- */
+
 public class Extra {
 
     public static boolean comparePassword(EditText p, EditText cp){
@@ -28,7 +26,7 @@ public class Extra {
 
     public static List<NameValuePair> parseJSON(JSONObject json) throws JSONException {
 
-        List<NameValuePair> pairs = new ArrayList<NameValuePair>();
+        List<NameValuePair> pairs = new ArrayList<>();
 
         Iterator<String> keys = json.keys();
         while(keys.hasNext()){

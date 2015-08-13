@@ -1,7 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <color name="white">#FFFFFF</color>
-    <color name="colorPrimary">#F44336</color>
-    <color name="colorPrimaryDark">#D32F2F</color>
-    <color name="colorAccent">#8BC34A</color>
+
+<!--Design Colors-->
+    <color name="themePrimary">#FF9800</color>
+    <color name="themePrimaryDark">#F57C00</color>
+    <color name="themeAccent">#4CAF50</color>
+    <color name="themePrimaryText">#212121</color>
+    <color name="themeSecondayText">#727272</color>
+    <color name="themeLightPrimaryColor">#FFE0B2</color>
+    <color name="themeDivider">#FFE0B2</color>
+
 </resources>
